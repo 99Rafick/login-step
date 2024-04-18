@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+    <script type="module" defer>
+        import Avatar from "./src/Custom-Element/Avatar.js";
+        customElements.define('avatar-box', Avatar)
+    </script>
+</head>
+<body>
+    <main class="grid grid-cols-5 w-full h-screen">
+        <div class="bg-cover bg-bottom w-full h-full col-span-2" style="background-image: url('public/left.jpg');"></div>
+        <div class="relative w-full h-full col-span-3 flex items-center justify-center">
+           <div class="w-max relative">
+
+               <h1 class="text-2xl xl:text-4xl font-bold text-pink-700">Login</h1>
+
+               <span class="text-lg text-gray-500 mt-3">Please select your account</span>
+
+               <div class="mt-5 flex items-center justify-between w-[510px] px-4 py-2 bg-gray-50 rounded-lg">
+                    <div class="flex items-center gap-3">
+                        <avatar-box size="medium" src="public/profil.jpg"></avatar-box>
+                        <p>Welcome back, <span class="font-bold">Hamid</span></p>
+                    </div>
+                    <a href="" class="text-red-500 font-semibold">Remove</a>
+               </div>
+               <div class="flex items-center justify-between mt-10 h-24">
+                   <a href="" class="text-lg underline">Login to a different account</a>
+                   <button class="relative cursor-pointer h-12 flex items-center justify-center rounded-md bg-pink-500 text-white w-28">
+                       <span>Login</span>
+                       <ion-icon name="chevron-forward-outline"></ion-icon>
+                   </button>
+               </div>
+               <hr>
+               <div class="flex items-center justify-between mt-5">
+                   <p>Don't have an account ?</p>
+                   <a href="" class="relative cursor-pointer h-12 flex items-center justify-center rounded-md bg-pink-500 text-white w-20">Sign up</a>
+               </div>
+           </div>
+        </div>
+    </main>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
